@@ -11,6 +11,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!--Maps scripts - file complete-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-zcwYwJhCWQPG4AlprFWBEfK8PE4PRuM&sensor=false" type="text/javascript"></script>
+	<script src="Scripts/Map/GoogleMaps.js"></script>
+
+	<!-- Page script - wip -->
+	<script src="Scripts/Page/Default.js"></script>
 </head>
 <body>
 <header>
@@ -211,7 +218,12 @@
 	    <div class="col-md-12">
 		    <div class="whiteBox">
 				<div class="inner">
-                    <p>Tab 2</p>
+                    <div id="map">
+							<!--wip - scripts added but to plumb in - center location: lat = 52, lon = -2, zoom = 5-->
+						</div>
+						<div class="inner">
+							<h2 class="noMarginBottom">View our main office and 5 sites</h2>
+						</div>
 				</div>
 		    </div>
 	    </div>
@@ -220,7 +232,45 @@
 	    <div class="col-md-12">
 		    <div class="whiteBox">
 				<div class="inner">
-                    <p>Tab 3</p>
+                    <div class="row" id="tab-3">
+				<div class="col-md-12">
+					<div class="whiteBox">
+						<div class="inner clearfix">
+							<h2>Images</h2>
+							<h4>All our image are made to fit and aligned for your viewing pleasure - you have checked <span class="strong">0</span> images</h4>
+
+							<div class="imageBox">
+								<img src="Images/Gallery/Image-1.jpg" />
+								<input type="checkbox" />
+							</div>
+							<div class="imageBox">
+								<img src="Images/Gallery/Image-2.jpg" />
+								<input type="checkbox" />
+							</div>
+							<div class="imageBox">
+								<img src="Images/Gallery/Image-3.jpg" />
+								<input type="checkbox" />
+							</div>
+							<div class="imageBox">
+								<img src="Images/Gallery/Image-4.jpg" />
+								<input type="checkbox" />
+							</div>
+							<div class="imageBox">
+								<img src="Images/Gallery/Image-5.jpg" />
+								<input type="checkbox" />
+							</div>
+							<div class="imageBox">
+								<img src="Images/Gallery/Image-6.jpg" />
+								<input type="checkbox" />
+							</div>
+							<div class="imageBox">
+								<img src="Images/Gallery/Image-7.jpg" />
+								<input type="checkbox" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 				</div>
 		    </div>
 	    </div>
@@ -228,9 +278,25 @@
      <div class="row tab-pane fade in active" id="tab-4">
 	    <div class="col-md-12">
 		    <div class="whiteBox">
-				<div class="inner">
-                    <p>Tab 4</p>
-				</div>
+				<div class="inner clearfix">
+							<h2>Contact Us</h2>
+							<p>This form doesn't go anywhre but feel free to add you details and click <b>submit</b></p>
+							<p class="mediumMarginBottom">If you don't complte all the required fields an error will be shown '*' - once successfully submitted a preview of your message will be shown with theoption to reset and start again</p>
+
+							<label for="">Name *</label>
+							<input type="text" />
+
+							<label for="">Number *</label>
+							<input type="text" />
+
+							<label for="">Email</label>
+							<input type="text" />
+
+							<label for="">Message *</label>
+							<textarea placeholder="Enter your message and submit to preview"></textarea>
+
+							<input type="submit" class="button success" value="send" />
+						</div>
 		    </div>
 	    </div>
     </div>
