@@ -13,8 +13,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <!--Maps scripts - file complete-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-zcwYwJhCWQPG4AlprFWBEfK8PE4PRuM&sensor=false" type="text/javascript"></script>
-	<script src="Scripts/Map/GoogleMaps.js"></script>
+	<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-zcwYwJhCWQPG4AlprFWBEfK8PE4PRuM&sensor=false" type="text/javascript"></script>
+	<script src="Scripts/Map/GoogleMaps.js"></script>-->
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5DJLUbioNAd-v4VKQ3rQWW4zaLQe7UYU&callback=initMap"></script>
+    <script src="Scripts/Map/SimpleMap.js"></script>
+
 
 	<!-- Page script - wip -->
 	<script src="Scripts/Page/Default.js"></script>
@@ -216,14 +220,12 @@
     </div>
     <div class="row tab-pane fade in active" id="tab-2">
 	    <div class="col-md-12">
-		    <div class="whiteBox">
+		    <div class="whiteBox">				
+                <div id="map">
+				<!--wip - scripts added but to plumb in - center location: lat = 52, lon = -2, zoom = 5-->
+				</div>
 				<div class="inner">
-                    <div id="map">
-							<!--wip - scripts added but to plumb in - center location: lat = 52, lon = -2, zoom = 5-->
-						</div>
-						<div class="inner">
-							<h2 class="noMarginBottom">View our main office and 5 sites</h2>
-						</div>
+					<h2 class="noMarginBottom">View our main office and 5 sites</h2>
 				</div>
 		    </div>
 	    </div>
