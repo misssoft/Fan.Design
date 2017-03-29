@@ -347,6 +347,15 @@ input[type="checkbox"].input-validation-error {
 	width: 100px;
 	border: 1px solid #cccccc;
 	float: left;
+	position: relative; 
+	margin: 10px;
+}
+
+.checkbox{ 
+	position: absolute; 
+	top: 0px; 
+	right: -42px;
+	float:right; 
 }
 
 .sampleImage {
