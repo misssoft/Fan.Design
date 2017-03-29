@@ -395,3 +395,11 @@ tr.pager td {
 .mediumMarginBottom {
 	margin-bottom: 20px;
 }
+
+#stattable th{
+	font-weight: bold;
+}
+
+.icon-circle{
+	color: limegreen;
+}
