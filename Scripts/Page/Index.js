@@ -1,21 +1,38 @@
 $(function InitScoreArea(){
 	console.log("Setting score event");  
-    var icons = $('li i');
-    $.each(icons, function (index, item){
-           console.log(index + item);
-           $(item).click(function(){
-              if ($(item).hasClass('icon-circle')){
-                 $(item).removeClass('icon-circle');
-                 $(item).addClass('icon-circle-o');
-              }
-              else if ($(item).hasClass('icon-circle-o')){
-                 $(item).removeClass('icon-circle-o');
-                 $(item).addClass('icon-circle');
-              };
-       })
-    });
+    AddClick();
 });;
 
-function IconClick(){
-    console.log($(this));
+function AddClick(){
+    var icons = $('li i');
+    $.each(icons, function (index, item){
+           $(item).click(function(){
+              IconClick(item);
+       })
+    });
+}
+
+function IconClick(item){
+    console.log($(item));
+    var listitem = $(item).parent()
+    console.log(listitem);
+    var parentId = $(listitem).attr('id');
+    console.log(parentId);
+    var count = parentId.substring(1);
+    var list = listitem.parent().children();
+    console.log(list);
+    $(list).each(function(index,li){
+        var icon = $(li).children();
+        if (index < count) //  dots before the clicked one
+        { if (count<5){
+            $(li).html("<i class='icon icon-circle' style='color:red'></i>");            
+            }
+          else{
+            $(li).html("<i class='icon icon-circle' style='color:limegreen'></i>");
+        }
+        }else{// dots after the clicked one
+            $(li).html("<i class='icon icon-circle-o'></i>");
+        } 
+    });
+    AddClick();
 }
